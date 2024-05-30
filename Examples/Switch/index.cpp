@@ -1,6 +1,7 @@
 /*Inserire un numero da 1 a 12 e restituire il mese*/
 #include <iostream>
 using namespace std;
+
 int main(){	
 	int mese;	
 	cout << "Inserisci un numero da 1 a 12: ";	

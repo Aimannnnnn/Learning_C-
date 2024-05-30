@@ -6,6 +6,12 @@ void Incremento(double &prezzo){
     prezzo = prezzo + ((prezzo * 3) / 100);
 }
 
+// se vuoi fare la stessa cosa senza usare un riferimento
+// int Incremento(double prezzo){
+//     prezzo = prezzo + ((prezzo * 3) / 100);
+//     return prezzo;
+// }
+
 int main(){
 
     system("clear");
