@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <limits>
 
 void Show(double balance){
     std::cout << "Your balance is: " << std::setprecision(2) << std::fixed << balance << "$\n";
@@ -48,8 +49,12 @@ int main(){
         std::cout << "What do you want to do?\n1: Show Balance\n2: Withdraw\n3: Deposit\n4: Exit\n";
         std::cin >> choice;
 
-        std::cin.clear();   // non va
-        fflush(stdin);      // non va
+        if (std::cin.fail()) {
+            std::cin.clear(); // Clear the error flag
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore the rest of the line
+            std::cout << "Invalid input. Please enter a valid choice.\n";
+            continue;
+        }
 
         switch(choice){
             case 1: Show(balance);
