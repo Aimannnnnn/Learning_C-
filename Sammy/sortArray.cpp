@@ -12,6 +12,12 @@ int main(){
                 temp = array[j];
                 array[j] = array[i];
                 array [i] = temp;
+                // swap senza una terza variabile
+                /*int i=10;
+                int j=5;
+                i = i + j; //15
+                j = i - j; //10
+                i = i - j; //5 */
             }
         }
     }

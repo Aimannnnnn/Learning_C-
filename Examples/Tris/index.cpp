@@ -13,7 +13,7 @@ using namespace std;
 
 char vincitore(char matrice[][4]){		//Questa funzione ha il compito di controllare un possibile vincitore
 
-    char vinci='a';						//Ci sono 8 possibilità di vincita
+    char vinci='a';						//Ci sono 8 possibilitï¿½ di vincita
     if(matrice[1][1]=='X' && matrice[1][2]=='X' && matrice[1][3]=='X'){
         vinci='g';						//Di conseguenza ci sono 16 IF
         return vinci;
@@ -23,7 +23,7 @@ char vincitore(char matrice[][4]){		//Questa funzione ha il compito di controlla
         return vinci;
     }									//Sia da 'g' (giocatore) che da 's' (server)
     if(matrice[3][1]=='X' && matrice[3][2]=='X' && matrice[3][3]=='X'){			
-        vinci='g';						//In modo che se non trova alcun vincitore la variabile resterà invariata
+        vinci='g';						//In modo che se non trova alcun vincitore la variabile resterï¿½ invariata
         return vinci;
     }
     if(matrice[1][1]=='X' && matrice[2][2]=='X' && matrice[3][3]=='X'){
@@ -112,7 +112,7 @@ int main(){
     		flag1=false;
     		cout << "\n  Riga: ";	//Vengono inserite le "coordinate" e successivamente un controllo
     		cin >> riga;
-    		cout << "\n  Colonna: ";	//Verifica che siano dei valori possibili, in caso negativo c'è la possibilità di riinserirle
+    		cout << "\n  Colonna: ";	//Verifica che siano dei valori possibili, in caso negativo c'ï¿½ la possibilitï¿½ di riinserirle
     		cin >> colonna;
     		if(matrice[riga][colonna]!='X' && matrice[riga][colonna]!= 'O' && matrice[riga][colonna]!=' ' && matrice[riga][colonna]!='1' && matrice[riga][colonna]!='2' && matrice[riga][colonna]!='3' && matrice[riga][colonna]!='O' && riga<4 && colonna<4 && riga>0 && colonna>0){
         		matrice[riga][colonna]='X';
@@ -131,7 +131,7 @@ int main(){
 				flag=true;
         	}
     	}while(flag==false);
-    	matrice[rigaS][colonnaS]='O';	//Quando verranno trovati dei valori accettabili il simbolo 'O' prenderà posto sulla griglia
+    	matrice[rigaS][colonnaS]='O';	//Quando verranno trovati dei valori accettabili il simbolo 'O' prenderï¿½ posto sulla griglia
     	system("CLS");
     }while(vincitore(matrice)!='s' && vincitore(matrice)!='g');		// TUTTO QUESTO CICLO VERRA' RIPETUTO NON APPENA LA FUNZIONE vincitore TROVERA' UN VINCITORE
 
