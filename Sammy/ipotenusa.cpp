@@ -12,6 +12,6 @@ int main(){
     std::cin >> b;
     c = sqrt (pow(a, 2) + pow(b ,2));
     std::cout << "Your hypotenuse is " << c;
-
+ 
 return 0;
 }
